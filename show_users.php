@@ -1,17 +1,45 @@
-<?php
-    require 'db.php';
-
-    // SQL query to retrieve data from the authors table
-    $sql = "SELECT * FROM Usuario";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo "UsuarioID: " . $row["usuario_id"]. " - Genero: " . $row["genero"]. " - Telefono: " . $row["telefono"]. "- Nombre: " . $row["nombre"]. "- Edad: " . $row["edad"].  "<br>";
-        }
-    } else {
-        echo "0 results";
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
     }
 
-$conn->close();
-    ?>
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        word-wrap: break-word; /* Enable word wrapping */
+        max-width: 200px; /* Adjust the max-width as per your preference */
+        overflow: auto; /* Add scrollbar when content overflows */
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<?php
+// Assuming you have already established a database connection
+require 'db.php';
+// Retrieve data from the database
+$query = "SELECT * FROM usuario"; // Replace 'your_table' with the actual table name
+$result = mysqli_query($conn, $query);
+
+// Create the table dynamically
+echo '<table>';
+echo '<tr>';
+while ($field = mysqli_fetch_field($result)) {
+    echo '<th>' . $field->name . '</th>';
+}
+echo '</tr>';
+
+// Output the data rows
+while ($row = mysqli_fetch_assoc($result)) {
+    echo '<tr>';
+    foreach ($row as $value) {
+        echo '<td>' . $value . '</td>';
+    }
+    echo '</tr>';
+}
+
+echo '</table>';
+?>

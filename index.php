@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <h1>hola<h1>
     <style>
       body {
           background-image: url("Imagenes/Book\ Store.jpg");
@@ -33,6 +32,9 @@
     </button>
     <button>
         <a class="btn btn-primary" href="show_editorial.php">Editorial</a>
+    </button>
+    <button>
+        <a class="btn btn-primary" href="show_users.php">Users</a>
     </button>
     </center>
   </body>
