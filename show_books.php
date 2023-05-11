@@ -18,7 +18,7 @@
 // Assuming you have already established a database connection
 require 'db.php';
 // Retrieve data from the database
-$query = "SELECT * FROM empleados"; // Replace 'your_table' with the actual table name
+$query = "SELECT * FROM libros"; // Replace 'your_table' with the actual table name
 $result = mysqli_query($conn, $query);
 
 // Create the table dynamically

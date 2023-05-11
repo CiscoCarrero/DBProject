@@ -40,3 +40,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 echo '</table>';
 ?>
+<!--add editorial-->
+<?php
+require 'add_empleados.php';
+?>
