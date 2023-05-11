@@ -1,18 +1,42 @@
-<?php
-    require 'db.php';
-
-    // SQL query to retrieve data from the authors table
-    $sql = "SELECT * FROM empleados";
-    
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo "Id del empleado: " . $row["empleado_id"]. " - Edad: " . $row["edad"]. " - Posicion: " . $row["posicion"]. "- Nombre: " . $row["nombre"].  "<br>";
-        }
-    } else {
-        echo "0 results";
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
     }
 
-$conn->close();
-    ?>
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<?php
+// Assuming you have already established a database connection
+require 'db.php';
+// Retrieve data from the database
+$query = "SELECT * FROM empleados"; // Replace 'your_table' with the actual table name
+$result = mysqli_query($conn, $query);
+
+// Create the table dynamically
+echo '<table>';
+echo '<tr>';
+while ($field = mysqli_fetch_field($result)) {
+    echo '<th>' . $field->name . '</th>';
+}
+echo '</tr>';
+
+// Output the data rows
+while ($row = mysqli_fetch_assoc($result)) {
+    echo '<tr>';
+    foreach ($row as $value) {
+        echo '<td>' . $value . '</td>';
+    }
+    echo '</tr>';
+}
+
+echo '</table>';
+?>

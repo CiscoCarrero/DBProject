@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="Styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
@@ -15,30 +15,24 @@
           background-size: cover;
         }
     </style>
+    <br>
+    <br>
     <center>
-    <h1>Autores</h1>
+    <h1>Ver Data de Tablas</h1>
     <br>
-    <?php
-    require 'show_authors.php';
-    ?>
     <br>
-    <h1>Books</h1>
-    <br>
-    <?php
-    require 'show_books.php';
-    ?>
-    <br>
-    <h1>Usuarios</h1>
-    <br>
-    <?php
-    require 'show_users.php';
-    ?>
-    <br>
-    <h1>Empleados</h1>
-    <?php
-    require 'show_empleados.php';
-    ?>
+    <button>
+        <a class="btn btn-primary" href="show_authors.php">Autores</a>
+    </button>
+    <button>
+        <a class="btn btn-primary" href="show_books.php">Libros</a>
+    </button>
+    <button>
+        <a class="btn btn-primary" href="show_empleados.php">Empleados</a>
+    </button>
+    <button>
+        <a class="btn btn-primary" href="show_editorial.php">Editorial</a>
+    </button>
     </center>
-    <br>
   </body>
 </html>
