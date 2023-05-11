@@ -3,6 +3,7 @@
 
     // SQL query to retrieve data from the authors table
     $sql = "SELECT * FROM empleados";
+    
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
