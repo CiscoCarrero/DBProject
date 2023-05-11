@@ -8,6 +8,9 @@
         border: 1px solid #ccc;
         padding: 8px;
         text-align: left;
+        word-wrap: break-word; /* Enable word wrapping */
+        max-width: 200px; /* Adjust the max-width as per your preference */
+        overflow: auto; /* Add scrollbar when content overflows */
     }
 
     th {
@@ -39,4 +42,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 echo '</table>';
+?>
+
+<!-- add autor -->
+<?php 
+require 'add_authors.php';
 ?>
