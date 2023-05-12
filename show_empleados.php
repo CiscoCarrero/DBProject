@@ -31,6 +31,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 echo '</table>';
 ?>
 
+<div class="text-center">
+    <a href="index.php" class="back-button">Back</a>
+</div>
+
 <div class="form-container">
         <div>
             <?php require 'add_empleados.php'; ?>

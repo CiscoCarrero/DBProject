@@ -33,6 +33,11 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 echo '</table>';
 ?>
+
+<div class="text-center">
+    <a href="index.php" class="back-button">Back</a>
+</div>
+
 <!--add editorial-->
 <?php
 require 'add_editorial.php';
