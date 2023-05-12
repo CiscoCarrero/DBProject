@@ -34,7 +34,7 @@
         <a class="btn btn-primary" href="show_editorial.php">Editorial</a>
     </button>
     <button>
-        <a class="btn btn-primary" href="show_users.php">Users</a>
+        <a class="btn btn-primary" href="show_users.php">Usuarios</a>
     </button>
     </center>
   </body>
