@@ -43,3 +43,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 echo '</table>';
 ?>
+<?php
+require 'add_ordenes.php';
+?>
