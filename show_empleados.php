@@ -13,8 +13,19 @@
     th {
         background-color: #f2f2f2;
     }
+
+    .form-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .form-container form {
+            width: 45%;
+        }
+
 </style>
 <?php
+
 // Assuming you have already established a database connection
 require 'db.php';
 // Retrieve data from the database
@@ -40,7 +51,15 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 echo '</table>';
 ?>
-<!--add editorial-->
-<?php
-require 'add_empleados.php';
-?>
+
+<div class="form-container">
+        <div>
+            <?php require 'add_empleados.php'; ?>
+        </div>
+        <div>
+            <?php require 'update_empleados.php'; ?>
+        </div>
+        <div>
+        <?php require 'delete_empleados.php'; ?>
+        </div>
+    </div>

@@ -2,22 +2,24 @@
 <html>
 <center>
 <head>
-    <title>Agregar Empleado</title>
+    <title>Modificar Empleado</title>
 </head>
 <body>
-    <h2>Agregar Empleado</h2>
-    <form method="post" action="add_empleados.php">
+    <h2>Modificar Empleado</h2>
+    <form method="post" action="update_empleados.php">
+        <label for="empleado_id">ID:</label>
+        <input type="number" name="empleado_id" id="empleado_id" required><br>
 
-        <label for="nombre">Nombre:</label>
+        <label for="nombre">Nuevo nombre:</label>
         <input type="text" name="nombre" id="nombre" required><br>
 
-        <label for="edad">Edad:</label>
+        <label for="edad">Nueva edad:</label>
         <input type="number" name="edad" id="edad"><br>
 
-        <label for="posicion">Posición:</label>
+        <label for="posicion">Nueva posición:</label>
         <input type="text" name="posicion" id="posicion"><br>
 
-        <input type="submit" value="Agregar">
+        <input type="submit" value="Actualizar">
     </form>
 </body>
 </center>
@@ -34,10 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $edad = $_POST['edad'];
     $posicion = $_POST['posicion'];
 
-    // Preparar y ejecutar la consulta SQL INSERT
-    $query = "INSERT INTO empleados (empleado_id, nombre, edad, posicion) VALUES (?, ?, ?, ?)";
+    // Preparar y ejecutar la consulta SQL UPDATE
+    $query = "UPDATE empleados SET nombre = ?, edad = ?, posicion = ? WHERE empleado_id = ?";
     $stmt = mysqli_prepare($conn, $query);
-    mysqli_stmt_bind_param($stmt, "isss", $empleado_id, $nombre, $edad, $posicion);
+    mysqli_stmt_bind_param($stmt, "sssi", $nombre, $edad, $posicion, $empleado_id);
 
     if (mysqli_stmt_execute($stmt)) {
         mysqli_stmt_close($stmt);
@@ -45,12 +47,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: show_empleados.php");
         exit();
     } else {
-        // Error al insertar
-        echo "Error al insertar datos: " . mysqli_error($conn);
+        // Error al actualizar
+        echo "Error al actualizar datos: " . mysqli_error($conn);
     }
 
     // Cerrar la consulta y la conexión a la base de datos
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
 }
-?> 
+?>
