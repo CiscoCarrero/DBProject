@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Eliminar Empleado</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Eliminar empleado</title>
 </head>
 <body>
+    <div class = "container">
     <h2>Eliminar Empleado</h2>
     <form method="post" action="delete_empleados.php">
         <label for="empleado_id">Empleado ID:</label>
@@ -11,6 +15,7 @@
 
         <input type="submit" value="Eliminar">
     </form>
+    </div>
 </body>
 </html>
 

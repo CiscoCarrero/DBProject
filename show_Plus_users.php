@@ -1,22 +1,8 @@
-<style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    th, td {
-        border: 1px solid #ccc;
-        padding: 8px;
-        text-align: left;
-        word-wrap: break-word; /* Enable word wrapping */
-        max-width: 200px; /* Adjust the max-width as per your preference */
-        overflow: auto; /* Add scrollbar when content overflows */
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-</style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
+</head>
 <?php
 // Assuming you have already established a database connection
 require 'db.php';

@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
+</head>
 <center>
 <body>
+    <div class="container">
     <h2>Add Autor</h2>
-    <form method="post" action="add_authors.php">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" required><br>
+        <form method="post" action="add_authors.php">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required><br>
 
-        <label for="bio">Biography:</label>
-        <textarea name="bio" id="bio"></textarea><br>
+            <label for="bio">Biography:</label>
+            <textarea name="bio" id="bio"></textarea><br>
 
-        <label for="fechaNac">Fecha de Nacimiento:</label>
-        <input type="date" name="fechaNac" id="fechaNac"><br>
+            <label for="fechaNac">Fecha de Nacimiento:</label>
+            <input type="date" name="fechaNac" id="fechaNac"><br>
 
-        <label for="estatus">Estatus:</label>
-        <input type="text" name="estatus" id="estatus"><br>
+            <label for="estatus">Estatus:</label>
+            <input type="text" name="estatus" id="estatus"><br>
 
-        <input type="submit" value="Add">
-    </form>
+            <input type="submit" value="Add">
+        </form>
+    </div>
 </body>
 </center>
 </html>

@@ -2,3 +2,48 @@ h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: aliceblue;
 }
+
+body {
+    background-image: url("Imagenes/Book\ Store.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.form-container form {
+    width: 45%;
+}
+
+.container {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}

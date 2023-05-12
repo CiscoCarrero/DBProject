@@ -2,17 +2,23 @@
 <html>
 <center>
 <head>
-    <title>Add User Plus</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Agregar Usuarios Plus</title>
 </head>
 <body>
-    <h2>Add User Plus</h2>
-    <form method="post" action="add_users_plus.php">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required><br>
-        <label for="discount">Discount: $</label>
-    <input type="number" name="discount" id="discount" step="0.01"><br>
-    <input type="submit" value="Add">
-</form>
+    <div class = "container">
+        <h2>Add User Plus</h2>
+        <form method="post" action="add_users_plus.php">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required><br>
+            <label for="discount">Discount: $</label>
+        <input type="number" name="discount" id="discount" step="0.01"><br>
+        <input type="submit" value="Add">
+        </form>
+    </div>
 </body>
 </center>
 </html>

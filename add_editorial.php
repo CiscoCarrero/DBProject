@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
-<center>
 <head>
     <title>Add Editorial</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
-    <h2>Add Editorial</h2>
-    <form method="post" action="add_editorial.php">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" required><br>
+    <div class="container">
+        <h2 class="text-center">Añade Editorial</h2>
+        <form method="post" action="add_editorial.php">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" required>
+            </div>
 
-        <label for="direccion">Dirección:</label>
-        <input type="text" name="direccion" id="direccion"><br>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección:</label>
+                <input type="text" name="direccion" id="direccion" class="form-control">
+            </div>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email"><br>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" name="email" id="email" class="form-control">
+            </div>
 
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" name="telefono" id="telefono"><br>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input type="tel" name="telefono" id="telefono" class="form-control">
+            </div>
 
-        <input type="submit" value="Add">
-    </form>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</center>
 </html>
+
 <?php
 // Assuming you have already established a database connection
 require 'db.php';
@@ -56,5 +71,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_close($conn);
 }
 ?>
-añadelo al final de show_editorial
 

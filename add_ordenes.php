@@ -2,9 +2,13 @@
 <html>
 <center>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
     <title>Agregar Orden</title>
 </head>
 <body>
+    <div class="container">
     <h2>Agregar Orden</h2>
     <form method="post" action="add_ordenes.php">
         <label for="numOrden">Número de Orden:</label>
@@ -22,6 +26,7 @@
         <input type="submit" value="Agregar">
     </form>
 </body>
+</div>
 </center>
 </html>
 <?php

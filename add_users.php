@@ -2,32 +2,38 @@
 <html>
 <center>
 <head>
-    <title>Add User</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Añadir usuarios</title>
 </head>
 <body>
-    <h2>Add User</h2>
-    <form method="post" action="add_users.php">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required><br>
+    <div class = "container">
+        <h2>Add User</h2>
+        <form method="post" action="add_users.php">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required><br>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required><br>
 
-        <label for="edad">Edad:</label>
-        <input type="number" name="edad" id="edad" required><br>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" id="edad" required><br>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required><br>
 
-        <label for="genero">Género:</label>
-        <select name="genero" id="genero" required>
-            <option value="masculino">Masculino</option>
-            <option value="femenino">Femenino</option>
-            <option value="otro">Otro</option>
-        </select><br>
+            <label for="genero">Género:</label>
+            <select name="genero" id="genero" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="No binario">No binario</option>
+                <option value="Otro">Otro</option>
+            </select><br>
 
-        <input type="submit" value="Add">
-    </form>
+            <input type="submit" value="Add">
+        </form>
+    </div>
 </body>
 </center>
 </html>

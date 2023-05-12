@@ -2,23 +2,28 @@
 <html>
 <center>
 <head>
-    <title>Agregar Empleado</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Agregar empleados</title>
 </head>
 <body>
-    <h2>Agregar Empleado</h2>
-    <form method="post" action="add_empleados.php">
+    <div class="container">
+        <h2>Agregar Empleado</h2>
+        <form method="post" action="add_empleados.php">
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" required><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required><br>
 
-        <label for="edad">Edad:</label>
-        <input type="number" name="edad" id="edad"><br>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" id="edad"><br>
 
-        <label for="posicion">Posición:</label>
-        <input type="text" name="posicion" id="posicion"><br>
+            <label for="posicion">Posición:</label>
+            <input type="text" name="posicion" id="posicion"><br>
 
-        <input type="submit" value="Agregar">
-    </form>
+            <input type="submit" value="Agregar">
+        </form>
+    </div>
 </body>
 </center>
 </html>

@@ -1,79 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Book</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Add books</title>
 </head>
 <center>
 <body>
-    <h2>Add Book</h2>
-    <form method="post" action="add_books.php">
-        <label for="ISBN">ISBN:</label>
-        <input type="text" name="ISBN" id="ISBN" required><br>
+    <div class="container">
+        <h2>Add Book</h2>
+        <form method="post" action="add_books.php">
+            <label for="ISBN">ISBN:</label>
+            <input type="text" name="ISBN" id="ISBN" required><br>
 
-        <label for="autor_id">Author:</label>
-        <?php
-        // Assuming you have already established a database connection
-        require 'db.php';
+            <label for="autor_id">Author:</label>
+            <?php
+            // Assuming you have already established a database connection
+            require 'db.php';
 
-        // Retrieve the authors from the database
-        $query = "SELECT autor_id, nombre FROM autor";
-        $result = mysqli_query($conn, $query);
+            // Retrieve the authors from the database
+            $query = "SELECT autor_id, nombre FROM autor";
+            $result = mysqli_query($conn, $query);
 
-        // Check if any authors are found
-        if (mysqli_num_rows($result) > 0) {
-            echo '<select name="autor_id" id="autor_id">';
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo '<option value="' . $row['autor_id'] . '">' . $row['nombre'] . '</option>';
+            // Check if any authors are found
+            if (mysqli_num_rows($result) > 0) {
+                echo '<select name="autor_id" id="autor_id">';
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<option value="' . $row['autor_id'] . '">' . $row['nombre'] . '</option>';
+                }
+                echo '</select>';
+            } else {
+                echo 'No authors found.';
             }
-            echo '</select>';
-        } else {
-            echo 'No authors found.';
-        }
 
-        // Close the database connection
-        mysqli_close($conn);
-        ?>
-        <br>
+            // Close the database connection
+            mysqli_close($conn);
+            ?>
+            <br>
 
-        <label for="editorial_nombre">Editorial:</label>
-        <?php
-        // Assuming you have already established a database connection
-        require 'db.php';
+            <label for="editorial_nombre">Editorial:</label>
+            <?php
+            // Assuming you have already established a database connection
+            require 'db.php';
 
-        // Retrieve the editorials from the database
-        $query = "SELECT nombre FROM editorial";
-        $result = mysqli_query($conn, $query);
+            // Retrieve the editorials from the database
+            $query = "SELECT nombre FROM editorial";
+            $result = mysqli_query($conn, $query);
 
-        // Check if any editorials are found
-        if (mysqli_num_rows($result) > 0) {
-            echo '<select name="editorial_nombre" id="editorial_nombre">';
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo '<option value="' . $row['nombre'] . '">' . $row['nombre'] . '</option>';
+            // Check if any editorials are found
+            if (mysqli_num_rows($result) > 0) {
+                echo '<select name="editorial_nombre" id="editorial_nombre">';
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<option value="' . $row['nombre'] . '">' . $row['nombre'] . '</option>';
+                }
+                echo '</select>';
+            } else {
+                echo 'No editorials found.';
             }
-            echo '</select>';
-        } else {
-            echo 'No editorials found.';
-        }
 
-        // Close the database connection
-        mysqli_close($conn);
-        ?>
-        <br>
+            // Close the database connection
+            mysqli_close($conn);
+            ?>
+            <br>
 
-        <label for="nombre">Book Name:</label>
-        <input type="text" name="nombre" id="nombre" required><br>
+            <label for="nombre">Book Name:</label>
+            <input type="text" name="nombre" id="nombre" required><br>
 
-        <label for="anio_publ">Publication Year:</label>
-        <input type="text" name="anio_publ" id="anio_publ" required><br>
+            <label for="anio_publ">Publication Year:</label>
+            <input type="text" name="anio_publ" id="anio_publ" required><br>
 
-        <label for="idioma">Language:</label>
-        <input type="text" name="idioma" id="idioma" required><br>
+            <label for="idioma">Language:</label>
+            <input type="text" name="idioma" id="idioma" required><br>
 
-        <label for="resumen">Summary:</label>
-        <textarea name="resumen" id="resumen"></textarea><br>
+            <label for="resumen">Summary:</label>
+            <textarea name="resumen" id="resumen"></textarea><br>
 
-        <input type="submit" value="Add">
-    </form>
+            <input type="submit" value="Add">
+        </form>
+    </div>
 </body>
 </center>
 <?php

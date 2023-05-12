@@ -2,9 +2,13 @@
 <html>
 <center>
 <head>
-    <title>Modificar Empleado</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Modificar empleado</title>
 </head>
 <body>
+    <div class="container">
     <h2>Modificar Empleado</h2>
     <form method="post" action="update_empleados.php">
         <label for="empleado_id">ID:</label>
@@ -21,6 +25,7 @@
 
         <input type="submit" value="Actualizar">
     </form>
+    </div>
 </body>
 </center>
 </html>
