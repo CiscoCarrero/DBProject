@@ -18,7 +18,7 @@
     <br>
     <br>
     <center>
-    <h1>Ver Data de Tablas</h1>
+    <h1>VER, INSERTAR & MODIFICAR DATOS</h1>
     <br>
     <br>
     <button>
@@ -34,7 +34,13 @@
         <a class="btn btn-primary" href="show_editorial.php">Editorial</a>
     </button>
     <button>
-        <a class="btn btn-primary" href="show_users.php">Users</a>
+        <a class="btn btn-primary" href="show_users.php">Usuarios</a>
+    </button>
+    <button>
+        <a class="btn btn-primary" href="show_Plus_users.php">Premium Users</a>
+    </button>
+    <button>
+        <a class="btn btn-primary" href="show_ordenes.php">Ordenes</a>
     </button>
     </center>
   </body>
