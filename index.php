@@ -34,6 +34,7 @@
           <a class="btn btn-primary me-2" href="show_users.php">Usuarios</a>
           <a class="btn btn-primary me-2" href="show_ordenes.php">Ordenes</a>
           <a class="btn btn-primary me-2" href="show_inventario.php">Inventario</a>
+          <a class="btn btn-primary me-2" href="queries.php">Queries</a>
         </div>
       </div>
     </div>

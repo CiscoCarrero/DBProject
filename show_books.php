@@ -35,10 +35,15 @@ echo '</table>';
 </div>
 
 <div class="form-container">
+
         <div>
             <?php require 'add_books.php'; ?>
         </div>
-        
+        <div>
+            <?php
+            require 'update_books.php';
+            ?>
+        </div>
         <div>
         <?php require 'delete_books.php'; ?>
         </div>
