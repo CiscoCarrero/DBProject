@@ -7,7 +7,7 @@
 // Assuming you have already established a database connection
 require 'db.php';
 // Retrieve data from the database
-$query = "SELECT * FROM libros"; // Replace 'your_table' with the actual table name
+$query = "SELECT * FROM inventario"; // Replace 'your_table' with the actual table name
 $result = mysqli_query($conn, $query);
 
 // Create the table dynamically
@@ -33,13 +33,6 @@ echo '</table>';
 <div class="text-center">
     <a href="index.php" class="back-button">Back</a>
 </div>
-
-<div class="form-container">
-        <div>
-            <?php require 'add_books.php'; ?>
-        </div>
-        
-        <div>
-        <?php require 'delete_books.php'; ?>
-        </div>
-    </div>
+<?php
+require 'add_inventario.php'
+?>
