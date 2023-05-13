@@ -1,5 +1,4 @@
 ## Bookstore Database - Proyecto Final 
-## Descripción
 - Este proyecto es una página web que permite ver, insertar y modificar datos en una base de datos.
 ## Caracteristicas
 - Mostrar datos de autores, editoriales, libros, empleados, usuarios premium, usuarios, órdenes e inventario.
